@@ -1,5 +1,83 @@
-$primary-color: #FEFEFE;
+$primary-color: #1CE;
 
+// RESET =========================
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+// BASE STYLES ==================
 body {
-  background: $primary-color;
+  background: #EFEFEF;
+  font-size: 19px;
+  color: #333;
+  line-height: 1.5;
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// HEADER =======================
+#site__header {
+  background: #222;
+  height: 80px;
+}
+
+// FOOTER ========================
+#site__footer {
+  background: #222;
+  height: 80px;
+}
+
+// MAIN CONTENT =================
+#site__main   {
+  width: 1200px;
+  margin: 50px auto;
+}
+
+// ARTICLE ======================
+.article {
+  
+  // HEADER
+  .article__header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1  {
+      font-size: 60px;
+      margin: 0 0 15px;
+    }
+  }  
+
+  // FEATURED IMAGE
+  .article__image {
+    img   {
+      max-width: 100%;
+    }
+  }
+
+  // ARTICLE FOOTER
+  .article__footer {
+
+  }
+
+}
+
+// BYLINE ===================
+.byline {
+  color: #777;
+  text-align: center;
+
+  .byline__box {
+    display: inline-block;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
