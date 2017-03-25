@@ -4,6 +4,7 @@ const gulp = require('gulp'),
 gulp.task('styles', () => {
   return gulp.src('./sass/styles.scss')
     .pipe(sass())
+    .on('error', sass.logError)
     .pipe(gulp.dest('./css'));
 });
 
