@@ -84,9 +84,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // ARTICLE SINGLE =================
+$article-padding: 80px;
+
 .article--single {
-  .content  {
-    padding: 50px;
+  .article__inner   {
+    display: flex;
+    padding: $article-padding;
+  }
+
+  .sidebar {
+    padding-right: ($article-padding / 2);
+    margin-right: ($article-padding / 2);
+    border-right: 1px solid #BBB;
+    flex: 0 0 300px;
   }
 }
 
@@ -94,6 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 .content {
 
   p, pre, ul, ol, table, img, > div {
+    margin-top: 0;
     margin-bottom: 35px;
   }
 
@@ -125,7 +136,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   img {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     border-radius: 4px;
   }
@@ -180,6 +192,50 @@ h1, h2, h3, h4, h5, h6 {
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+}
+
+// SIDEBAR ==================
+$sidebar-width: 300px;
+
+.sidebar {
+  width: $sidebar-width;
+
+  .sidebar__box {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3  {
+    margin: 0 0 20px;
+    color: lighten($text-color, 20%);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// TABLE OF CONTENTS ===============
+.table-of-contents  {
+  list-style: none;
+
+  a   {
+    font-size: 18px;
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: lighten($text-color, 25%);
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
